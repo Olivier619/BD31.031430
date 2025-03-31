@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompts Midjourney - BD Creator</title>
+    <link rel="stylesheet" href="styles.css">
+     <style> /* Styles copiés pour cohérence */
+         .pagination-container { margin: 20px 0; text-align: center; } .pagination-button { padding: 8px 15px; margin: 0 5px; cursor: pointer; background-color: #3498db; color: white; border: none; border-radius: 4px; } .pagination-button:disabled { background-color: #bdc3c7; cursor: default; } .page-indicator { margin: 0 15px; font-weight: bold; } .panels-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 15px; } .panel { border: 1px solid #ddd; border-radius: 4px; padding: 15px; background-color: #fff; } .panel h5 { margin-top: 0; color: #2980b9; border-bottom: 1px solid #eee; padding-bottom: 5px;} .prompt { margin-bottom: 10px; } .prompt-textarea { width: 100%; min-height: 100px; font-family: monospace; font-size: 0.9em; padding: 8px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; resize: vertical; background-color: #f8f9fa; } .copy-button { display: block; margin-top: 5px; padding: 5px 10px; font-size: 0.9em; cursor: pointer; background-color: #27ae60; color: white; border: none; border-radius: 3px; } .copy-button:hover { background-color: #229954; } .error-message { color: #e74c3c; font-weight: bold; background-color: #fadbd8; border: 1px solid #e74c3c; padding: 10px; border-radius: 4px; margin-top: 15px;}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BD Creator - Prompts</h1>
+         <!-- Contrôles de session -->
+         <div class="session-controls">
+            <div class="session-buttons">
+                <button id="save-session-btn" class="session-button">Sauvegarder la session</button>
+                <button id="new-session-btn" class="session-button">Nouvelle session</button>
+                <select id="load-session-select" class="session-select"><option value="">Charger une session...</option></select>
+            </div>
+            <div id="session-info" class="session-info">Session actuelle: <span id="current-session-name">Nouvelle session</span></div>
+        </div>
+        <!-- Navigation -->
+        <div class="navigation">
+            <a href="index.html" class="button">Accueil</a>
+            <a href="scenario.html" class="button">Scénario</a>
+            <a href="storyboard.html" class="button">Storyboard</a>
+            <a href="prompts.html" class="button active">Prompts</a>
+        </div>
+
+        <div id="chapter-info">
+            <h2>Prompts Midjourney pour le chapitre : <span id="chapter-name">Chargement...</span></h2>
+        </div>
+
+        <p>Voici les prompts générés pour chaque case du storyboard...</p>
+
+        <div id="prompts-container" class="prompts-container">
+            <p>Chargement des prompts...</p>
+            <!-- La pagination et les prompts seront injectés ici -->
+        </div>
+
+        <div class="navigation" style="margin-top: 20px;">
+            <a href="storyboard.html" id="back-to-storyboard" class="button">Retour au storyboard</a>
+        </div>
+    </div>
+
+    <!-- Scripts à la fin -->
+    <script src="bd_creator_session_manager.js"></script>
+    <script src="scenario_detaille.js"></script> <!-- Probablement pas nécessaire ici -->
+    <script src="storyboard_detaille.js"></script> <!-- Probablement pas nécessaire ici -->
+    <script src="prompts_detailles.js"></script> <!-- Important -->
+    <script src="main.js"></script>
+</body>
+</html>

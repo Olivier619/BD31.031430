@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scénario - BD Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> /* Styles copiés depuis index.html pour cohérence */
+        .scenario-container { margin-top: 20px; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } .scenario-header { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; } .scenario-theme { font-style: italic; color: #555; } .scenario-section { margin-bottom: 20px; } .personnages-list { list-style: none; padding: 0; } .personnage-item { margin-bottom: 10px; padding: 10px; background-color: #fff; border-radius: 4px; border: 1px solid #eee; } .chapitres-accordion .chapitre-item { margin-bottom: 5px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; } .chapitre-header { background-color: #eee; padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #ddd; font-weight: bold; } .chapitre-header:hover { background-color: #e0e0e0; } .chapitre-header.active { background-color: #d8d8d8; } .chapitre-content { padding: 15px; background-color: #fdfdfd; border-top: none; display: none; } .chapitre-resume { margin-bottom: 10px; font-style: italic; } .pages-count { font-weight: bold; margin-bottom: 10px; color: #333; } .error-message { color: #e74c3c; font-weight: bold; background-color: #fadbd8; border: 1px solid #e74c3c; padding: 10px; border-radius: 4px; margin-top: 15px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BD Creator - Scénario</h1>
+         <!-- Contrôles de session -->
+         <div class="session-controls">
+            <div class="session-buttons">
+                <button id="save-session-btn" class="session-button">Sauvegarder la session</button>
+                <button id="new-session-btn" class="session-button">Nouvelle session</button>
+                <select id="load-session-select" class="session-select"><option value="">Charger une session...</option></select>
+            </div>
+            <div id="session-info" class="session-info">Session actuelle: <span id="current-session-name">Nouvelle session</span></div>
+        </div>
+        <!-- Navigation -->
+        <div class="navigation">
+            <a href="index.html" class="button">Accueil</a>
+            <a href="scenario.html" class="button active">Scénario</a>
+            <a href="storyboard.html" class="button">Storyboard</a>
+            <a href="prompts.html" class="button">Prompts</a>
+        </div>
+
+        <h2>Scénario généré à partir de : <span id="keywords-display">(Chargement...)</span></h2>
+        <p>Voici le scénario généré pour votre BD...</p>
+
+        <div id="scenario-container" class="scenario-container">
+            <p>Chargement du scénario...</p>
+        </div>
+    </div>
+
+    <!-- Scripts à la fin -->
+    <script src="bd_creator_session_manager.js"></script>
+    <script src="scenario_detaille.js"></script>
+    <script src="storyboard_detaille.js"></script>
+    <script src="prompts_detailles.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
