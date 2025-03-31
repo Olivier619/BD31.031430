@@ -1,5 +1,3 @@
-// --- CONTENU COMPLET DE bd_creator_session_manager.js (Version Finale) ---
-/**
  * BD Creator - Session Manager
  * Gère la sauvegarde et le chargement des sessions de travail.
  */
