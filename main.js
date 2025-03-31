@@ -1,5 +1,3 @@
-// --- FICHIER COMPLET : main.js (Version Finale avec Storyboard Complet) ---
-
 /**
  * BD Creator - Script Principal (main.js)
  * Gère l'initialisation et les interactions pour toutes les pages.
